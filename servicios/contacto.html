@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/png" sizes="30x30">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https: //fonts.googleapis.com/css2? familia= Roboto:peso@400;500;700;900 & display=swap" rel="hoja de estilo">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Contacto</title>
+</head>
+<body class="body">
+    <header class="header">
+        <a href="../index.html"><img class="header__logo" src="../assets/logo.png" alt="Logo de la empresa"></a>
+        
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a href="../servicios/comprar.html">Comprar</a></li>
+                <li class="header__item"><a href="../servicios/vender.html">Vender</a></li>
+                <li class="header__item"><a href="../servicios/alquilar.html">Alquilar</a></li>
+                <li class="header__item"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="sectionFormulario">
+            <form class="formulario" action="" method="get">
+                <h1 class="formulario__titleH1">Formulario de contacto</h1>
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">Datos personales</legend>
+        
+                    <label class="formulario__label" for="nombres">Nombres</label>
+                    <input class="formulario__input" type="text" name="nombres" id="nombres" required>
+                    
+                    <label class="formulario__label" for="apellidos">Apellidos</label>
+                    <input class="formulario__input" type="text" name="apellidos" id="apellidos" required>
+                            
+                    <label class="formulario__label" for="email">Email</label>
+                    <input class="formulario__input" type="email" name="email" id="email" required>
+                </fieldset>
+        
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">Datos de consulta</legend>
+        
+                    <div class="checkOptions">
+                        <input type="checkbox" name="comprar" id="comprar">
+                        <label class="formulario__labelCheckbox" for="comprar">Comprar</label>
+        
+                        <input type="checkbox" name="vender" id="vender">
+                        <label class="formulario__labelCheckbox" for="vender">Vender</label>
+                            
+                        <input type="checkbox" name="alquilar" id="alquilar">
+                        <label class="formulario__labelCheckbox" for="alquilar">Alquilar</label>
+                    </div>
+                            
+                    <label class="formulario__label formulario__label--marginTop" for="consulta">Consulta</label>
+                    <textarea class="formulario__textarea" name="consulta" id="consulta" cols="30" rows="10" required
+                        placeholder="Ingrese su consulta"></textarea>
+                </fieldset>
+        
+                <div class="buttonContainer">
+                    <input class="formulario__btn formulario__btn--backgroundLimpiar" type="reset" value="Limpiar">
+                    <input class="formulario__btn formulario__btn--backgroundEnviar" type="submit" value="Enviar">
+                </div>
+            </form>
+
+            <div class="formularioImgContainer">
+                <img src="../assets/imagen_contacto.jpg" alt="Imagen de formulario" class="formularioImg">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <h4 class="footer__titleH4">INFORMACIÓN</h4>
+                <li><a class="footer__item" href="#">Tasaciones y precios</a></li>
+                <li><a class="footer__item" href="#">Sobre nosotros</a></li>
+                <li><a class="footer__item" href="#">Oportunidades de empleo</a></li>
+                <li><a class="footer__item" href="#">Soporte</a></li>
+            </ul>
+
+            <ul class="footer__list">
+                <h4 class="footer__titleH4">LEGAL</h4>
+                <li><a class="footer__item" href="#">Términos de uso</a></li>
+                <li><a class="footer__item" href="#">Acuerdo de licencia</a></li>
+                <li><a class="footer__item" href="#">Política de privacidad</a></li>
+                <li><a class="footer__item" href="#">Información de Copyright</a></li>
+                <li><a class="footer__item" href="#">Política de cookies</a></li>
+                <li><a class="footer__item" href="#">Configuración de cookies</a></li>
+            </ul>
+
+            <ul class="footer__list">
+                <h4 class="footer__titleH4">COMUNIDAD</h4>
+                <div class="footer__comunidad">
+                    <li><a class="footer__item" href="http://facebook.com"><img src="../assets/redes_sociales/facebook.png" alt="Imagen de Facebook" class="footer__logoRedSocial"></a></li>
+                    <li><a class="footer__item" href="http://instagram.com"><img src="../assets/redes_sociales/instagram.png" alt="Imagen de Instagram" class="footer__logoRedSocial"></a></li>
+                    <li><a class="footer__item" href="http://twitter.com"><img src="../assets/redes_sociales/twitter.png" alt="Imagen de Twitter" class="footer__logoRedSocial"></a></li>
+                    <li><a class="footer__item" href="http://youtube.com"><img src="../assets/redes_sociales/youtube.png" alt="Imagen de Youtube" class="footer__logoRedSocial"></a></li>
+                </div>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

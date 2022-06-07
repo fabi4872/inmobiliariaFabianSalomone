@@ -1,0 +1,548 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.body{
+    height: 100vh;
+    margin-top: 6.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "header header header"
+                         "sectionHero sectionHero sectionHero"
+                         "main main main"
+                         "footer footer footer";
+}
+
+
+
+.header{
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 7rem;
+    padding: 0 2rem 0 4rem;
+    background-image: url(../assets/header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0.5rem ridge rgb(58, 53, 52);
+    border-bottom: 0.5rem ridge rgb(58, 53, 52);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.header__logo {
+    width: 10rem;
+    filter: invert(50%);
+}
+.header__logo:hover{
+    filter: invert(80%);
+}
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.header__item{
+    margin: 0 2rem;
+}
+.header__item a{
+    text-decoration: none;
+    color: #CCC;
+}
+.header__item a:hover{
+    color: white;
+    border-bottom: 0.5rem solid tomato;
+}
+
+
+
+.sectionHero{
+    grid-area: sectionHero;
+    position: relative;
+}
+.sectionHero__video{
+    height: 100%;
+    width: 100%;
+}
+.videoCardContainer{
+    height: 65rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.videoCard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 60%;
+    background-color: rgba(43, 42, 46, 0.5);
+    padding: 2rem 3rem 4rem 3rem;
+    border-top: 1rem solid rgba(0, 0, 0, 0.5);
+}
+.videoCard__titleH2{
+    font-size: 4rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.videoCard__titleH2--color{
+    color: tomato;
+    font-weight: bold;
+}
+.videoCard__paragraph{
+    font-size: 2rem;
+    line-height: 3rem;
+    color: #CCC;
+    text-shadow: black 0.1em 0.1em 0.1em;
+    padding: 2rem 0 4rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.videoCard__btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+.videoCard__btn--aspecto{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0.3rem solid green;
+    color: white;
+    border-radius: 0.3rem;
+}
+.videoCard__btn--aspecto:hover{
+    background-color: rgba(2, 209, 36, 0.5);
+    border: 0.3rem solid rgba(2, 209, 36, 0.5);
+}
+
+
+
+.main{
+    grid-area: main;
+    height: auto;
+}
+
+
+
+.sectionBeneficios{
+    margin-top: -0.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 27rem);
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+    background-color: #FEFEFE;
+}
+.beneficio{
+    border: 0.1rem solid #CCC;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-top: 1rem solid #0099FF;
+    background-color: #FFFFFF;
+    padding: 1rem;
+}
+.beneficio:hover{
+    box-shadow: 0 0.7rem 0.7rem 0 #2F353C;
+}
+.beneficio__imgContainer{
+    height: 30rem;
+    width: 100%;
+}
+.beneficio__img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.beneficio__titleH3{
+    padding: 1rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #010042;
+}
+.beneficio__paragraph{
+    padding-bottom: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+
+.footer{
+    grid-area: footer;
+    padding: 3rem 0;
+    background-color: #1D262D;
+}
+.footer__nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: flex-start;
+}
+.footer__list{
+    list-style-type: none;
+}
+.footer__list a{
+    text-decoration: none;
+    line-height: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #869FB2;
+}
+.footer__list a:hover{
+    color: white;
+}
+.footer__titleH4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 0;
+}
+.footer__comunidad{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__logoRedSocial{
+    width: 2rem;
+    margin: 0.3rem 0.5rem;
+}
+
+
+
+
+
+
+
+/* Comienzo de estilos para "contacto.html" */
+.sectionFormulario{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: flex-end;
+    align-items: center;
+    padding: 10rem 1rem;
+    grid-column-gap: 1rem;
+}
+.formulario{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #2F353C;
+    padding: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+.formularioImg{
+    height: 100%;
+    width: 100%;
+}
+.formulario__titleH1{
+    color: #C1C1C1;
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+    align-self: center;
+    padding-bottom: 3rem;
+}
+.formulario__fieldset{
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    border: 0.1rem solid #F6961C;
+}
+.formulario__legend{
+    letter-spacing: 0.2rem;
+    padding: 0 1rem;
+    color: #F6961C;
+}
+.formulario__label{
+    color: #C1C1C1;
+}
+.formulario__input{
+    width: 100%;
+    height: 3rem;
+    margin: 0.5rem 0 1rem 0;
+    color: #C1C1C1;
+    border: 0.1rem solid #C1C1C1;
+    border-radius: 0.2rem;
+    padding: 0 0.5rem;
+    background-color: #292929;
+    font-size: 1rem;
+}
+.formulario__labelCheckbox{
+    color: #C1C1C1;
+    padding: 0 0.5rem;
+}
+.checkOptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin: 0 12rem;
+}
+.formulario__textarea{
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0 1rem 0;
+    color: #C1C1C1;
+    border: 0.1rem solid #C1C1C1;
+    border-radius: 0.2rem;
+    padding: 1rem 0.5rem;
+    background-color: #292929;
+    resize: none;
+    font-size: 1rem;
+}
+.formulario__label--marginTop{
+    margin-top: 1rem;
+}
+.buttonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.formulario__btn{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    min-width: 14rem;
+    margin: 0 1rem;
+}
+.formulario__btn--backgroundEnviar{
+    border: 0.1rem solid #1983C5;
+    background-color: #1983C5;
+}
+.formulario__btn--backgroundLimpiar{
+    border: 0.1rem solid #F6961C;
+    background-color: #F6961C;
+}
+.formulario__btn--backgroundEnviar:hover{
+    border: 0.1rem solid #05588C;
+    background-color: #05588C;
+}
+.formulario__btn--backgroundLimpiar:hover{
+    border: 0.1rem solid #CD7403;
+    background-color: #CD7403;
+}
+/* Fin de estilos para "contacto.html" */
+
+
+
+
+
+
+
+/* Comienzo de estilos para "comprar.html", "vender.html" y "alquilar.html" */
+.sectionPublicacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.publicacion{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 10rem 0;
+    width: 60%;
+}
+.publicacion__titleH1{
+    color: #010042;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+}
+.publicacion__paragraph{
+    padding: 1.5rem 0 2rem 0;
+    color: #9BA5B1;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.publicacion__videoContainer{
+    margin-bottom: 2.5rem;
+}
+.publicacion__video{
+    width: 100%;
+    height: 100%;
+}
+.publicacion__btn{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border-radius: 0.2rem;
+}
+.publicacion__btn--aspecto{
+    border: 0.1rem solid #1983C5;
+    background-color: #1983C5;
+    color: white;
+}
+.publicacion__btn:hover{
+    border: 0.1rem solid #05588C;
+    background-color: #05588C;
+}
+/* Fin de estilos para "alquilar.html" */
+
+
+
+
+
+
+
+@media screen and (max-width: 1650px){
+    .videoCardContainer{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+    }
+    .videoCard__titleH2{
+        font-size: 2rem;
+    }
+    .videoCard__btn{
+        padding: 1rem 2rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+    }
+    .sectionFormulario{
+        padding: 10rem 0rem;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0rem;
+        justify-items: center;
+    }
+    .checkOptions{
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .formularioImgContainer{
+        display: none;
+    }
+    .sectionFormulario{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    .sectionBeneficios{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+    .videoCardContainer{
+        display: none;
+    }
+    .sectionHero{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 930px){
+    .body{
+        margin-top: 9.8rem;
+    }
+    .header{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 10rem;
+        padding: 0rem;
+    }
+    .sectionBeneficios{
+        grid-template-columns: 1fr;
+    }
+    .publicacion__btn{
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 678px){
+    .body{
+        margin-top: 14.8rem;
+    }
+    .header{
+        height: 15rem;
+    }
+    .footer__nav{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__list{
+        padding: 1.5rem 0;
+    }
+    .checkOptions{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 530px){
+    .body{
+        margin-top: 16.8rem;
+    }
+    .header{
+        height: 17rem;
+    }
+    .header__list{
+        flex-flow: column;
+        align-items: center;
+    }
+    .beneficio_img{
+        height: 80%;
+    }
+    .publicacion__btn{
+        text-decoration: none;
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.2rem;
+    }
+    .formulario__btn{
+        padding: 0.5rem 1rem;
+        min-width: auto;
+        margin: 0;
+    }
+    .formulario__legend{
+        display: none;
+    }
+    .formulario__titleH1{
+        font-size: 1rem;
+    }
+}
