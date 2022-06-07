@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="shortcut icon" href="../assets/favicon.png" type="image/png" sizes="30x30">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +44,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="flip-up">
         <nav class="footer__nav">
             <ul class="footer__list">
                 <h4 class="footer__titleH4">INFORMACIÓN</h4>
@@ -73,5 +75,9 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

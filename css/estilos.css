@@ -56,14 +56,19 @@
 }
 .header__item{
     margin: 0 2rem;
+    transform: scale(1);
+    border-top: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 2s;
 }
 .header__item a{
     text-decoration: none;
     color: #CCC;
 }
-.header__item a:hover{
-    color: white;
-    border-bottom: 0.5rem solid tomato;
+.header__item:hover{
+    transform: scale(1.2);
+    border-top: 0.3rem solid transparent;
+    border-bottom: 0.3rem solid tomato;
 }
 
 
@@ -166,9 +171,14 @@
     border-top: 1rem solid #0099FF;
     background-color: #FFFFFF;
     padding: 1rem;
+    transform: scale(1);
+    z-index: 1;
+    transition: all 3s;
 }
 .beneficio:hover{
     box-shadow: 0 0.7rem 0.7rem 0 #2F353C;
+    transform: scale(1.1);
+    z-index: 2;
 }
 .beneficio__imgContainer{
     height: 30rem;
@@ -195,10 +205,14 @@
 
 
 
-.footer{
+.footer {
     grid-area: footer;
     padding: 3rem 0;
-    background-color: #1D262D;
+    background: rgb(15,15,124);
+    background: -moz-linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
+    background: -webkit-linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
+    background: linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f7c", endColorstr="#03207d", GradientType=1);
 }
 .footer__nav{
     display: grid;
