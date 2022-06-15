@@ -1,39 +1,23 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 
 
-.body{
-    height: 100vh;
-    margin-top: 6.8rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: "header header header"
-                         "sectionHero sectionHero sectionHero"
-                         "main main main"
-                         "footer footer footer";
-}
-
-
-
 .header{
-    grid-area: header;
-    min-height: 7rem;
+    height: 7rem;
     background-image: url(../assets/header.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     border-top: 0.5rem ridge rgb(58, 53, 52);
     border-bottom: 0.5rem ridge rgb(58, 53, 52);
-    width: 100%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
+}
+.header__nav{
+    height: 100%;
+    padding: 0 2rem 0 4rem;
 }
 .header__logo {
     width: 10rem;
@@ -51,160 +35,100 @@
 .header__item{
     margin: 0 2rem;
     transform: scale(1);
-    transition: all 2s;
+    transition: all .1s;
 }
 .header__item a{
     text-decoration: none;
-    color: #CCC;
+    color: #C2CCCC;
 }
 .header__item:hover{
     transform: scale(1.2);
 }
+.header__item a:visited{
+    color: #C2CCCC;
+}
 .header__item a:hover{
     color: white;
 }
-
-
-
-.sectionHero{
-    grid-area: sectionHero;
-}
-.sectionHero__video{
-    height: 100%;
-    width: 100%;
-}
-.videoCardContainer{
-    height: 65rem;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.videoCard{
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column wrap;
-    align-items: center;
-    width: 60%;
-    background-color: rgba(43, 42, 46, 0.5);
-    padding: 2rem 3rem 4rem 3rem;
-    border-top: 1rem solid rgba(0, 0, 0, 0.5);
-}
-.videoCard__titleH2{
-    font-size: 4rem;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-.videoCard__titleH2--color{
-    color: tomato;
-    font-weight: bold;
-}
-.videoCard__paragraph{
-    font-size: 2rem;
-    line-height: 3rem;
-    color: #CCC;
-    text-shadow: black 0.1em 0.1em 0.1em;
-    padding: 2rem 0 4rem 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-.videoCard__btn{
-    padding: 1rem 2rem;
-    cursor: pointer;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-}
-.videoCard__btn--aspecto{
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 0.3rem solid green;
-    color: white;
-    border-radius: 0.3rem;
-}
-.videoCard__btn--aspecto:hover{
-    background-color: rgba(2, 209, 36, 0.5);
-    border: 0.3rem solid rgba(2, 209, 36, 0.5);
+.header__menu--color{
+    background-color: rgba(185, 172, 172, 0.5);
+    border-radius: 0.2rem;
 }
 
 
 
-.main{
-    grid-area: main;
-    height: auto;
+.carousel-inner img{
+    height: 50rem;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-control-icon--aspecto{
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(61, 60, 60, 0.5);
+}
+.carousel-caption--background{
+    background-color: rgba(61, 60, 60, 0.5);
+    border-top: 0.3rem solid rgba(0, 0, 0, 0.5);
+}
+.sectionCarousel{
+    margin-bottom: 5rem;
 }
 
 
 
-.sectionBeneficios{
-    padding: 15rem 0;
-}
 .beneficio{
-    border: 0.1rem solid #CCC;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-top: 1rem solid #0099FF;
     background-color: #FFFFFF;
     margin-top: 2rem;
-    margin-bottom: 2rem;
-    height: 50rem;
 }
-.beneficio:hover{
-    box-shadow: 0 0.7rem 0.7rem 0 #2F353C;
+.beneficio__img:hover{
+    transform: scale(1.05);
+    transition: ease-in-out 1s;
 }
-.beneficio__imgContainer{
-    width: 100%;
+.beneficio__card{
+    border-radius: 0;
+    border-top: 1rem solid #0099FF;
+    overflow: hidden;
 }
 .beneficio__img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+    width: 32rem;
+    height: 32rem;
+    object-fit: cover;
+    cursor: pointer;
 }
-.beneficio__titleH3{
-    padding: 1rem 0;
+.beneficio__titleH5{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     color: #010042;
 }
 .beneficio__paragraph{
-    padding-bottom: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    height: 5rem;
 }
 
 
 
 .footer {
-    grid-area: footer;
-    padding: 3rem 0;
     background: rgb(15,15,124);
     background: -moz-linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
     background: -webkit-linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
     background: linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f7c", endColorstr="#03207d", GradientType=1);
+    margin-top: 7rem;
 }
-.footer__nav{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    justify-items: center;
-    align-items: flex-start;
+.footer__titleH5{
+    color: white;
 }
 .footer__list{
     list-style-type: none;
+    margin: 2rem 0;
 }
-.footer__list a{
+.footer__item{
     text-decoration: none;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
@@ -213,173 +137,90 @@
 .footer__list a:hover{
     color: white;
 }
-.footer__titleH4{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+.footer__item > i{
+    font-size: 1.5rem;
+}
+.footer__item > i:hover{
     color: white;
-    padding: 0.5rem 0;
-}
-.footer__comunidad{
-    display: flex;
-    flex-wrap: wrap;
-}
-.footer__logoRedSocial{
-    width: 2rem;
-    margin: 0.3rem 0.5rem;
 }
 
 
 
-
-
-
-
-/* Comienzo de estilos para "contacto.html" */
-.sectionFormulario{
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    justify-items: flex-end;
-    align-items: center;
-    padding: 10rem 1rem;
-    grid-column-gap: 1rem;
+.busqueda__btn{
+    padding-right: 3rem;
+    padding-left: 3rem;
 }
-.formulario{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: #2F353C;
-    padding: 3rem;
-    font-family: 'Roboto', sans-serif;
-}
-.formularioImg{
-    height: 100%;
-    width: 100%;
-}
-.formulario__titleH1{
-    color: #C1C1C1;
-    letter-spacing: 0.1rem;
-    font-size: 1.7rem;
-    align-self: center;
-    padding-bottom: 3rem;
-}
-.formulario__fieldset{
-    margin-bottom: 3rem;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    border: 0.1rem solid #F6961C;
-}
-.formulario__legend{
-    letter-spacing: 0.2rem;
-    padding: 0 1rem;
-    color: #F6961C;
-}
-.formulario__label{
-    color: #C1C1C1;
-}
-.formulario__input{
-    width: 100%;
-    height: 3rem;
-    margin: 0.5rem 0 1rem 0;
-    color: #C1C1C1;
-    border: 0.1rem solid #C1C1C1;
-    border-radius: 0.2rem;
-    padding: 0 0.5rem;
-    background-color: #292929;
-    font-size: 1rem;
-}
-.formulario__labelCheckbox{
-    color: #C1C1C1;
-    padding: 0 0.5rem;
-}
-.checkOptions{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 1rem;
-    margin: 0 12rem;
-}
-.formulario__textarea{
-    width: 100%;
-    height: auto;
-    margin: 0.5rem 0 1rem 0;
-    color: #C1C1C1;
-    border: 0.1rem solid #C1C1C1;
-    border-radius: 0.2rem;
-    padding: 1rem 0.5rem;
-    background-color: #292929;
-    resize: none;
-    font-size: 1rem;
-}
-.formulario__label--marginTop{
-    margin-top: 1rem;
-}
-.buttonContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.formulario__btn{
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    padding: 0.5rem 3rem;
-    border-radius: 0.2rem;
+.busqueda__select{
     cursor: pointer;
-    min-width: 14rem;
-    margin: 0 1rem;
-}
-.formulario__btn--backgroundEnviar{
-    border: 0.1rem solid #1983C5;
-    background-color: #1983C5;
-}
-.formulario__btn--backgroundLimpiar{
-    border: 0.1rem solid #F6961C;
-    background-color: #F6961C;
-}
-.formulario__btn--backgroundEnviar:hover{
-    border: 0.1rem solid #05588C;
-    background-color: #05588C;
-}
-.formulario__btn--backgroundLimpiar:hover{
-    border: 0.1rem solid #CD7403;
-    background-color: #CD7403;
-}
-/* Fin de estilos para "contacto.html" */
-
-
-
-
-
-
-
-/* Comienzo de estilos para "comprar.html", "vender.html" y "alquilar.html" */
-.sectionPublicacion{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 .publicacion{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
+}
+.publicacion__card{
+    overflow: hidden;
+}
+.publicacion__img{
+    object-fit: cover;
+    width: 30rem;
+    height: 25rem;
+    cursor: pointer;
+}
+.publicacion__img:hover{
+    transform: scale(1.05);
+    transition: ease-in-out 1s;
+}
+.publicacion__caracteristicas{
+    width: 100%;
+    color: #5C78B4;
+}
+.publicacion__cantidad{
+    color: tomato;
+    font-size: 1rem;
+}
+.publicacion__paragraph{
+    font-size: 1.2rem;
+    color: #869FB2;
+    line-height: 2rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    padding: 10rem 0;
-    width: 60%;
+}
+.publicacion__expensas{
+    font-size: 1.2rem;
+    color: #5C78B4;
+    line-height: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    align-self: center;
+}
+
+
+
+.section__contacto{
+    margin-top: 5rem;
+}
+.label{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    align-self: center;
+}
+
+
+
+.sectionPublicacion{
+    margin-top: 4rem;
 }
 .publicacion__titleH1{
     color: #010042;
     letter-spacing: 0.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     font-size: 2rem;
+    align-self: center;
 }
 .publicacion__paragraph{
-    padding: 1.5rem 0 2rem 0;
+    padding: 1.5rem 0 1.5rem 0;
     color: #9BA5B1;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2rem;
 }
 .publicacion__videoContainer{
@@ -389,142 +230,36 @@
     width: 100%;
     height: 100%;
 }
-.publicacion__btn{
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 1rem 3rem;
-    border-radius: 0.2rem;
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px){
+    .header{
+        height: auto;
+    }
+    .header__list{
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .header__logo{
+        margin: 2rem 0;
+    }
 }
-.publicacion__btn--aspecto{
-    border: 0.1rem solid #1983C5;
-    background-color: #1983C5;
-    color: white;
-}
-.publicacion__btn:hover{
-    border: 0.1rem solid #05588C;
-    background-color: #05588C;
-}
-/* Fin de estilos para "alquilar.html" */
-
-
-
-
-
-
-
-@media screen and (max-width: 1650px){
-    .videoCardContainer{
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30%;
-    }
-    .videoCard__titleH2{
-        font-size: 2rem;
-    }
-    .videoCard__btn{
-        padding: 1rem 2rem;
-        cursor: pointer;
-        font-size: 1.2rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
-    }
-    .sectionFormulario{
-        padding: 10rem 0rem;
-        grid-template-columns: 1fr;
-        grid-column-gap: 0rem;
-        justify-items: center;
-    }
-    .checkOptions{
-        justify-content: flex-start;
-        margin: 0;
-    }
-    .formularioImgContainer{
-        display: none;
-    }
-    .sectionFormulario{
+@media screen and (max-width: 350px){
+    .header__nav{
         padding: 0;
     }
-}
-
-@media screen and (max-width: 1350px){
-    .videoCardContainer{
-        display: none;
-    }
-    .sectionHero{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 930px){
-    .body{
-        margin-top: 9.8rem;
-    }
-    .header{
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 15rem;
-        padding: 0rem;
-    }
-    .publicacion__btn{
-        text-decoration: none;
-        font-size: 1rem;
-        padding: 1rem 2rem;
-        border-radius: 0.2rem;
-    }
-}
-
-@media screen and (max-width: 678px){
-    .body{
-        margin-top: 14.8rem;
-    }
-    .footer__nav{
+    .header__navComponent{
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        align-items: center;
     }
-    .footer__list{
-        padding: 1.5rem 0;
-    }
-    .checkOptions{
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 530px){
-    .body{
-        margin-top: 16.8rem;
-    }
-    .header{
-        height: 17rem;
-    }
-    .header__list{
-        flex-flow: column;
-        align-items: center;
-    }
-    .beneficio_img{
-        height: 80%;
-    }
-    .publicacion__btn{
-        text-decoration: none;
-        font-size: 0.7rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.2rem;
-    }
-    .formulario__btn{
-        padding: 0.5rem 1rem;
-        min-width: auto;
-        margin: 0;
-    }
-    .formulario__legend{
-        display: none;
-    }
-    .formulario__titleH1{
-        font-size: 1rem;
+    .header__menu{
+        margin-bottom: 2rem;
     }
 }

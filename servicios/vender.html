@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/png" sizes="30x30">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
@@ -16,27 +16,27 @@
     <title>Vender</title>
 </head>
 <body class="body">
-    <header class="header d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header__nav">
+            <div class="container-fluid header__navComponent">
                 <a href="../index.html"><img class="header__logo" src="../assets/logo.png" alt="Logo de la empresa"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler header__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon header__menu--color"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav header__list">
                         <li class="nav-item header__item">
-                            <a class="nav-link" aria-current="page" href="comprar.html">Comprar</a>
+                            <a class="nav-link" href="../servicios/comprar.html">Comprar</a>
                         </li>
                         <li class="nav-item header__item">
                             <a class="nav-link" href="#">Vender</a>
                         </li>
                         <li class="nav-item header__item">
-                            <a class="nav-link" href="alquilar.html">Alquilar</a>
+                            <a class="nav-link" href="../servicios/alquilar.html">Alquilar</a>
                         </li>
                         <li class="nav-item header__item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="../servicios/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -44,34 +44,42 @@
         </nav>
     </header>
 
-    <main class="main">
-        <section class="sectionPublicacion">
-            <article class="publicacion">
+    <main class="main container">
+        <section class="sectionPublicacion row">
+            <article class="publicacion col-12 d-flex flex-column align-items-center">
                 <h1 class="publicacion__titleH1">Publique su propiedad</h1>
-                <p class="publicacion__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis delectus amet
-                    suscipit sit eius magnam officiis sed totam. Commodi, excepturi? Minus incidunt, similique quam tempora totam
-                    doloribus obcaecati, laborum saepe voluptatem dignissimos sapiente libero suscipit corporis quis sint nihil!
-                    Mollitia aspernatur assumenda praesentium at culpa aut provident dicta ipsam pariatur?.</p>
+                <p class="publicacion__paragraph">Un aspecto importante del marketing inmobiliario es la publicación de tu inmueble. Gracias a ella, 
+                    puedes alcanzar miles de potenciales interesados por un costo bajo (entre 1 y 2 USD por usuario si la haces correctamente).
+                    Confía en nuestro equipo de expertos, y venderás tu propiedad sin pérdidas monetarias.
+                </p>
                 <div class="publicacion__videoContainer">
                     <video class="publicacion__video" src="../assets/vender.mp4" controls></video>
                 </div>
-                <a type="button" class="publicacion__btn publicacion__btn--aspecto" href="">Publique aquí</a>
+                <a type="button" class="btn btn-primary" href="">Publique aquí</a>
             </article>
         </section>
     </main>
 
-    <footer class="footer" data-aos="flip-up">
-        <nav class="footer__nav">
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">INFORMACIÓN</h4>
+    <footer class="footer">
+        <nav class="footer__nav container-fluid row d-flex p-0 m-0">
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">INFORMACIÓN</h5>
                 <li><a class="footer__item" href="#">Tasaciones y precios</a></li>
                 <li><a class="footer__item" href="#">Sobre nosotros</a></li>
                 <li><a class="footer__item" href="#">Oportunidades de empleo</a></li>
                 <li><a class="footer__item" href="#">Soporte</a></li>
             </ul>
-
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">LEGAL</h4>
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">COMUNIDAD</h5>
+                <div class="footer__comunidad d-flex justify-content-evenly mt-2">
+                    <li><a class="footer__item m-2" href="http://facebook.com"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://instagram.com"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+            </ul>
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">LEGAL</h5>
                 <li><a class="footer__item" href="#">Términos de uso</a></li>
                 <li><a class="footer__item" href="#">Acuerdo de licencia</a></li>
                 <li><a class="footer__item" href="#">Política de privacidad</a></li>
@@ -79,23 +87,10 @@
                 <li><a class="footer__item" href="#">Política de cookies</a></li>
                 <li><a class="footer__item" href="#">Configuración de cookies</a></li>
             </ul>
-
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">COMUNIDAD</h4>
-                <div class="footer__comunidad">
-                    <li><a class="footer__item" href="http://facebook.com"><img src="../assets/redes_sociales/facebook.png" alt="Imagen de Facebook" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://instagram.com"><img src="../assets/redes_sociales/instagram.png" alt="Imagen de Instagram" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://twitter.com"><img src="../assets/redes_sociales/twitter.png" alt="Imagen de Twitter" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://youtube.com"><img src="../assets/redes_sociales/youtube.png" alt="Imagen de Youtube" class="footer__logoRedSocial"></a></li>
-                </div>
-            </ul>
         </nav>
     </footer>
 
-    <script>
-        AOS.init();
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

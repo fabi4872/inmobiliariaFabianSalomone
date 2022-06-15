@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/png" sizes="30x30">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
@@ -16,27 +16,27 @@
     <title>Comprar</title>
 </head>
 <body class="body">
-    <header class="header d-flex justify-content-center">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg header__nav">
+            <div class="container-fluid header__navComponent">
                 <a href="../index.html"><img class="header__logo" src="../assets/logo.png" alt="Logo de la empresa"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler header__menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon header__menu--color"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav header__list">
                         <li class="nav-item header__item">
-                            <a class="nav-link" aria-current="page" href="#">Comprar</a>
+                            <a class="nav-link" href="#">Comprar</a>
                         </li>
                         <li class="nav-item header__item">
-                            <a class="nav-link" href="vender.html">Vender</a>
+                            <a class="nav-link" href="../servicios/vender.html">Vender</a>
                         </li>
                         <li class="nav-item header__item">
-                            <a class="nav-link" href="alquilar.html">Alquilar</a>
+                            <a class="nav-link" href="../servicios/alquilar.html">Alquilar</a>
                         </li>
                         <li class="nav-item header__item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="../servicios/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -45,30 +45,238 @@
     </header>
 
     <main class="main">
-        <section class="sectionPublicacion">
-            <article class="publicacion">
-                <h1 class="publicacion__titleH1">Compre con nosotros</h1>
-                <p class="publicacion__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit ullam voluptatum magni est voluptate, id temporibus non neque? Quidem natus, temporibus laborum, quaerat tenetur cumque nemo similique voluptate, labore quasi tempora voluptas veniam explicabo beatae tempore molestias ipsa! Totam voluptate atque natus nostrum consequatur nihil consectetur excepturi obcaecati optio voluptas.</p>
-                <div class="publicacion__videoContainer">
-                    <video class="publicacion__video" src="../assets/comprar.mp4" controls></video>
+        <section class="busqueda mt-5 mb-3">
+            <form class="container" action="#" method="get">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 mt-3 mb-3">
+                        <select class="form-select form-control busqueda__select" aria-label="Default select example">
+                            <option selected>Tipo de propiedad</option>
+                            <option value="1">Casa</option>
+                            <option value="2">Departamento</option>
+                            <option value="3">Dúplex</option>
+                            <option value="4">Terreno</option>
+                            <option value="5">Local</option>
+                            <option value="6">Cochera</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-3 mb-3">
+                        <select class="form-select form-control busqueda__select" aria-label="Default select example">
+                            <option selected>Moneda</option>
+                            <option value="1">USD</option>
+                            <option value="2">ARS</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mt-3 mb-3">
+                        <select class="form-select form-control busqueda__select" aria-label="Default select example">
+                            <option selected>Apto banco</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 text-center mt-3 mb-3">
+                        <button type="submit" class="btn btn-primary busqueda__btn">Filtrar</button>
+                    </div>
                 </div>
-                <a type="button" class="publicacion__btn publicacion__btn--aspecto" href="">Ver publicaciones</a>
-            </article>
+            </form>
+        </section>
+
+        <section class="publicaciones container">
+            <div class="row">
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_uno.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Casa ubicada en 44 entre 25 y 26 N° 1535, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 120.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">100m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_dos.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Casa ubicada en 46 entre 2 y 3 N° 215, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 175.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">140m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_tres.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Departamento ubicado en 131 entre 65 y 66 N° 2150, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 85.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">70m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_cuatro.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Dúplex ubicado en 66 entre 146 y 147 N° 1350, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 110.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">110m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_cinco.png" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Departamento ubicado en 7 entre 37 y 38 N° 545, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 190.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">170m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">4 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_seis.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Casa ubicada en 526 entre 6 y 7 N° 45, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 220.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">185m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">5 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_siete.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Casa ubicada en 66 entre 25 y 26 N° 455, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 60.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">78m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_ocho.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Dúplex ubicado en 137 entre 65 y 66 N° 1240, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 95.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">102m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">2 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">3 </strong><i class="fa-solid fa-bed"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-warehouse"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publicacion col-12 col-md-6 col-lg-4">
+                    <div class="card publicacion__card">
+                        <img src="../assets/propiedades/propiedad_nueve.jpg" alt="Imagen de propiedad en venta" class="publicacion__img img-fluid">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-between">
+                            <p class="card-text publicacion__paragraph">
+                                Local ubicado en 54 y 9 N° 945, ciudad de La Plata
+                            </p>
+                            <h4 class="card-title publicacion__precio"><strong>USD 115.000</strong></h4>
+                            <div class="publicacion__caracteristicas d-flex justify-content-evenly mt-3 mb-3">
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">90m<sup>2</sup> </strong><i class="fa-solid fa-expand"></i></h5>
+                                <h5 class="publicacion__caracteristicas text-center"><strong class="publicacion__cantidad">1 </strong><i class="fa-solid fa-toilet-paper"></i></h5>
+                            </div>
+                            <button type="button" class="btn btn-primary align-self-center mt-3 mb-3">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer class="footer" data-aos="flip-up">
-        <nav class="footer__nav">
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">INFORMACIÓN</h4>
+    <footer class="footer">
+        <nav class="footer__nav container-fluid row d-flex p-0 m-0">
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">INFORMACIÓN</h5>
                 <li><a class="footer__item" href="#">Tasaciones y precios</a></li>
                 <li><a class="footer__item" href="#">Sobre nosotros</a></li>
                 <li><a class="footer__item" href="#">Oportunidades de empleo</a></li>
                 <li><a class="footer__item" href="#">Soporte</a></li>
             </ul>
-
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">LEGAL</h4>
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">COMUNIDAD</h5>
+                <div class="footer__comunidad d-flex justify-content-evenly mt-2">
+                    <li><a class="footer__item m-2" href="http://facebook.com"><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://instagram.com"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a class="footer__item m-2" href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                </div>
+            </ul>
+            <ul class="footer__list col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center">
+                <h5 class="footer__titleH5">LEGAL</h5>
                 <li><a class="footer__item" href="#">Términos de uso</a></li>
                 <li><a class="footer__item" href="#">Acuerdo de licencia</a></li>
                 <li><a class="footer__item" href="#">Política de privacidad</a></li>
@@ -76,23 +284,10 @@
                 <li><a class="footer__item" href="#">Política de cookies</a></li>
                 <li><a class="footer__item" href="#">Configuración de cookies</a></li>
             </ul>
-
-            <ul class="footer__list">
-                <h4 class="footer__titleH4">COMUNIDAD</h4>
-                <div class="footer__comunidad">
-                    <li><a class="footer__item" href="http://facebook.com"><img src="../assets/redes_sociales/facebook.png" alt="Imagen de Facebook" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://instagram.com"><img src="../assets/redes_sociales/instagram.png" alt="Imagen de Instagram" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://twitter.com"><img src="../assets/redes_sociales/twitter.png" alt="Imagen de Twitter" class="footer__logoRedSocial"></a></li>
-                    <li><a class="footer__item" href="http://youtube.com"><img src="../assets/redes_sociales/youtube.png" alt="Imagen de Youtube" class="footer__logoRedSocial"></a></li>
-                </div>
-            </ul>
         </nav>
     </footer>
 
-    <script>
-        AOS.init();
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
