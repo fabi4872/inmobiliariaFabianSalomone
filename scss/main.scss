@@ -14,54 +14,57 @@
     background-size: cover;
     border-top: 0.5rem ridge rgb(58, 53, 52);
     border-bottom: 0.5rem ridge rgb(58, 53, 52);
+    .header__nav{
+        height: 100%;
+        padding: 0 2rem 0 4rem;
+    }
+    .header__logo {
+        width: 10rem;
+        filter: invert(50%);
+    }
+    .header__logo:hover{
+        filter: invert(80%);
+    }
+    .header__list{
+        list-style-type: none;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        .header__item{
+            margin: 0 2rem;
+            transform: scale(1);
+            transition: all .1s;
+            a{
+                text-decoration: none;
+                color: #C2CCCC;
+            }
+            a:visited{
+                color: #C2CCCC;
+            }
+            a:hover{
+                color: white;
+            }
+        }
+        .header__item:hover{
+            transform: scale(1.2);
+        }
+        .header__menu--color{
+            background-color: rgba(185, 172, 172, 0.5);
+            border-radius: 0.2rem;
+        }
+    }
 }
-.header__nav{
-    height: 100%;
-    padding: 0 2rem 0 4rem;
-}
-.header__logo {
-    width: 10rem;
-    filter: invert(50%);
-}
-.header__logo:hover{
-    filter: invert(80%);
-}
-.header__list{
-    list-style-type: none;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
-.header__item{
-    margin: 0 2rem;
-    transform: scale(1);
-    transition: all .1s;
-}
-.header__item a{
-    text-decoration: none;
-    color: #C2CCCC;
-}
-.header__item:hover{
-    transform: scale(1.2);
-}
-.header__item a:visited{
-    color: #C2CCCC;
-}
-.header__item a:hover{
-    color: white;
-}
-.header__menu--color{
-    background-color: rgba(185, 172, 172, 0.5);
-    border-radius: 0.2rem;
-}
+    
 
 
 
-.carousel-inner img{
-    height: 50rem;
-    object-fit: cover;
-    object-position: center;
-}
+.carousel-inner{
+    img{
+        height: 50rem;
+        object-fit: cover;
+        object-position: center;
+    }
+} 
 .carousel-control-icon--aspecto{
     width: 5rem;
     height: 5rem;
@@ -134,9 +137,11 @@
     font-size: 0.8rem;
     color: #869FB2;
 }
-.footer__list a:hover{
-    color: white;
-}
+.footer__list{
+    a:hover{
+        color: white;
+    }
+} 
 .footer__item > i{
     font-size: 1.5rem;
 }
