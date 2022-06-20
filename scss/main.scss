@@ -14,102 +14,103 @@
     background-size: cover;
     border-top: 0.5rem ridge rgb(58, 53, 52);
     border-bottom: 0.5rem ridge rgb(58, 53, 52);
-    .header__nav{
+    &__nav{
         height: 100%;
-        padding: 0 2rem 0 4rem;
+        padding: 0 2rem;
     }
-    .header__logo {
+    &__logo {
         width: 10rem;
         filter: invert(50%);
     }
-    .header__logo:hover{
+    &__logo:hover{
         filter: invert(80%);
     }
-    .header__list{
+    &__menu--color{
+        background-color: rgba(185, 172, 172, 0.5);
+        border-radius: 0.2rem;
+    }
+    &__list{
         list-style-type: none;
         font-size: 1rem;
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
-        .header__item{
-            margin: 0 2rem;
-            transform: scale(1);
-            transition: all .1s;
-            a{
-                text-decoration: none;
-                color: #C2CCCC;
-            }
-            a:visited{
-                color: #C2CCCC;
-            }
-            a:hover{
-                color: white;
-            }
+    }
+    &__item{
+        margin: 0 2rem;
+        transform: scale(1);
+        transition: all .1s;
+        a{
+            text-decoration: none;
+            color: #C2CCCC;
         }
-        .header__item:hover{
-            transform: scale(1.2);
+        a:visited{
+            color: #C2CCCC;
         }
-        .header__menu--color{
-            background-color: rgba(185, 172, 172, 0.5);
-            border-radius: 0.2rem;
+        a:hover{
+            color: white;
         }
     }
-}
-    
-
-
-
-.carousel-inner{
-    img{
-        height: 50rem;
-        object-fit: cover;
-        object-position: center;
+    &__item:hover{
+        transform: scale(1.2);
     }
-} 
-.carousel-control-icon--aspecto{
-    width: 5rem;
-    height: 5rem;
-    background-color: rgba(61, 60, 60, 0.5);
 }
-.carousel-caption--background{
-    background-color: rgba(61, 60, 60, 0.5);
-    border-top: 0.3rem solid rgba(0, 0, 0, 0.5);
-}
+
+
+
 .sectionCarousel{
     margin-bottom: 5rem;
+    .carousel-inner{
+        img{
+            height: 50rem;
+            object-fit: cover;
+            object-position: center;
+        }
+        .carousel-caption--background{
+            background-color: rgba(61, 60, 60, 0.5);
+            border-top: 0.3rem solid rgba(0, 0, 0, 0.5);
+        }
+    } 
+    .carousel-control-icon--aspecto{
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(61, 60, 60, 0.5);
+    }
 }
 
 
 
-.beneficio{
-    background-color: #FFFFFF;
-    margin-top: 2rem;
-}
-.beneficio__img:hover{
-    transform: scale(1.05);
-    transition: ease-in-out 1s;
-}
-.beneficio__card{
-    border-radius: 0;
-    border-top: 1rem solid #0099FF;
-    overflow: hidden;
-}
-.beneficio__img{
-    width: 32rem;
-    height: 32rem;
-    object-fit: cover;
-    cursor: pointer;
-}
-.beneficio__titleH5{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    color: #010042;
-}
-.beneficio__paragraph{
-    line-height: 1.5rem;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    height: 5rem;
+.sectionBeneficios{
+    .beneficio{
+        background-color: #FFFFFF;
+        margin-top: 2rem;
+        .beneficio__card{
+            border-radius: 0;
+            border-top: 1rem solid #0099FF;
+            overflow: hidden;
+            .beneficio__img{
+                width: 32rem;
+                height: 32rem;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .beneficio__img:hover{
+                transform: scale(1.05);
+                transition: ease-in-out 1s;
+            }
+            .beneficio__titleH5{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 900;
+                color: #010042;
+            }
+            .beneficio__paragraph{
+                line-height: 1.5rem;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                height: 5rem;
+            }
+        }
+    }
 }
 
 
@@ -121,32 +122,30 @@
     background: linear-gradient(320deg, rgba(15, 15, 124, 1) 0%, rgba(15, 22, 135, 1) 25%, rgba(23, 32, 111, 1) 50%, rgba(10, 12, 94, 1) 75%, rgba(3, 32, 125, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f7c", endColorstr="#03207d", GradientType=1);
     margin-top: 7rem;
-}
-.footer__titleH5{
-    color: white;
-}
-.footer__list{
-    list-style-type: none;
-    margin: 2rem 0;
-}
-.footer__item{
-    text-decoration: none;
-    line-height: 1.7rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: #869FB2;
-}
-.footer__list{
-    a:hover{
-        color: white;
+    .footer__list{
+        list-style-type: none;
+        margin: 2rem 0;
+        .footer__titleH5{
+            color: white;
+        }
+        a:hover{
+            color: white;
+        }
+        .footer__item{
+            text-decoration: none;
+            line-height: 1.7rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: #869FB2;
+            i{
+                font-size: 1.5rem;
+            }
+            i:hover{
+                color: white;
+            }
+        }
     }
-} 
-.footer__item > i{
-    font-size: 1.5rem;
-}
-.footer__item > i:hover{
-    color: white;
 }
 
 
@@ -246,25 +245,25 @@
 @media screen and (max-width: 992px){
     .header{
         height: auto;
-    }
-    .header__list{
-        align-items: center;
-        margin-bottom: 2rem;
-    }
-    .header__logo{
-        margin: 2rem 0;
+        .header__logo{
+            margin: 2rem 0;
+        }
+        .header__list{
+            align-items: center;
+            margin-bottom: 2rem;
+        }
     }
 }
 @media screen and (max-width: 350px){
     .header__nav{
         padding: 0;
-    }
-    .header__navComponent{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-    }
-    .header__menu{
-        margin-bottom: 2rem;
+        .header__navComponent{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            .header__menu{
+                margin-bottom: 2rem;
+            }
+        }
     }
 }
