@@ -1,0 +1,19 @@
+.sectionCarousel{
+    margin-bottom: 5rem;
+    .carousel-inner{
+        img{
+            height: 50rem;
+            object-fit: cover;
+            object-position: center;
+        }
+        .carousel-caption--background{
+            background-color: rgba(61, 60, 60, 0.5);
+            border-top: 0.3rem solid rgba(0, 0, 0, 0.5);
+        }
+    } 
+    .carousel-control-icon--aspecto{
+        width: 5rem;
+        height: 5rem;
+        background-color: rgba(61, 60, 60, 0.5);
+    }
+}

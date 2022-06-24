@@ -11,22 +11,38 @@
   background-size: cover;
   border-top: 0.5rem ridge #3a3534;
   border-bottom: 0.5rem ridge #3a3534; }
+  @media screen and (max-width: 992px) {
+    .header {
+      height: auto; } }
   .header__nav {
     height: 100%;
     padding: 0 2rem; }
+    @media screen and (max-width: 350px) {
+      .header__nav {
+        padding: 0; } }
   .header__logo {
     width: 10rem;
     filter: invert(50%); }
+    @media screen and (max-width: 992px) {
+      .header__logo {
+        margin: 2rem 0; } }
   .header__logo:hover {
     filter: invert(80%); }
+  @media screen and (max-width: 350px) {
+    .header__menu {
+      margin-bottom: 2rem; } }
   .header__menu--color {
     background-color: rgba(185, 172, 172, 0.5);
     border-radius: 0.2rem; }
   .header__list {
     list-style-type: none;
     font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins";
     font-weight: 400; }
+    @media screen and (max-width: 992px) {
+      .header__list {
+        align-items: center;
+        margin-bottom: 2rem; } }
   .header__item {
     margin: 0 2rem;
     transform: scale(1);
@@ -40,6 +56,37 @@
       color: white; }
   .header__item:hover {
     transform: scale(1.2); }
+  @media screen and (max-width: 350px) {
+    .header__navComponent {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center; } }
+
+.footer {
+  background: #0f0f7c;
+  background: -moz-linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
+  background: -webkit-linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
+  background: linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f7c", endColorstr="#03207d", GradientType=1);
+  margin-top: 7rem; }
+  .footer__list {
+    list-style-type: none;
+    margin: 2rem 0; }
+    .footer__list a:hover {
+      color: white; }
+  .footer__titleH5 {
+    color: white; }
+  .footer__item {
+    text-decoration: none;
+    line-height: 1.7rem;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #869FB2; }
+    .footer__item i {
+      font-size: 1.5rem; }
+    .footer__item i:hover {
+      color: white; }
 
 .sectionCarousel {
   margin-bottom: 5rem; }
@@ -58,148 +105,96 @@
 .sectionBeneficios .beneficio {
   background-color: #FFFFFF;
   margin-top: 2rem; }
-  .sectionBeneficios .beneficio .beneficio__card {
+  .sectionBeneficios .beneficio__card {
     border-radius: 0;
     border-top: 1rem solid #0099FF;
     overflow: hidden; }
-    .sectionBeneficios .beneficio .beneficio__card .beneficio__img {
-      width: 32rem;
-      height: 32rem;
-      object-fit: cover;
-      cursor: pointer; }
-    .sectionBeneficios .beneficio .beneficio__card .beneficio__img:hover {
-      transform: scale(1.05);
-      transition: ease-in-out 1s; }
-    .sectionBeneficios .beneficio .beneficio__card .beneficio__titleH5 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 900;
-      color: #010042; }
-    .sectionBeneficios .beneficio .beneficio__card .beneficio__paragraph {
-      line-height: 1.5rem;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      height: 5rem; }
+  .sectionBeneficios .beneficio__img {
+    width: 32rem;
+    height: 32rem;
+    object-fit: cover;
+    cursor: pointer; }
+  .sectionBeneficios .beneficio__img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 1s; }
+  .sectionBeneficios .beneficio__titleH5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #010042; }
+  .sectionBeneficios .beneficio__paragraph {
+    line-height: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 5rem; }
 
-.footer {
-  background: #0f0f7c;
-  background: -moz-linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
-  background: -webkit-linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
-  background: linear-gradient(320deg, #0f0f7c 0%, #0f1687 25%, #17206f 50%, #0a0c5e 75%, #03207d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0f0f7c", endColorstr="#03207d", GradientType=1);
-  margin-top: 7rem; }
-  .footer .footer__list {
-    list-style-type: none;
-    margin: 2rem 0; }
-    .footer .footer__list .footer__titleH5 {
-      color: white; }
-    .footer .footer__list a:hover {
-      color: white; }
-    .footer .footer__list .footer__item {
-      text-decoration: none;
-      line-height: 1.7rem;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      font-size: 0.8rem;
-      color: #869FB2; }
-      .footer .footer__list .footer__item i {
-        font-size: 1.5rem; }
-      .footer .footer__list .footer__item i:hover {
-        color: white; }
-
-.busqueda__btn {
-  padding-right: 3rem;
-  padding-left: 3rem; }
-
-.busqueda__select {
-  cursor: pointer; }
-
-.publicacion {
-  margin-top: 2rem; }
-
-.publicacion__card {
-  overflow: hidden; }
-
-.publicacion__img {
-  object-fit: cover;
-  width: 30rem;
-  height: 25rem;
-  cursor: pointer; }
-
-.publicacion__img:hover {
-  transform: scale(1.05);
-  transition: ease-in-out 1s; }
-
-.publicacion__caracteristicas {
-  width: 100%;
-  color: #5C78B4; }
-
-.publicacion__cantidad {
-  color: tomato;
-  font-size: 1rem; }
-
-.publicacion__paragraph {
-  font-size: 1.2rem;
-  color: #869FB2;
-  line-height: 2rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400; }
-
-.publicacion__expensas {
-  font-size: 1.2rem;
-  color: #5C78B4;
-  line-height: 2rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  align-self: center; }
+.sectionPublicacion {
+  margin-top: 4rem; }
+  .sectionPublicacion .publicacion__titleH1 {
+    color: #010042;
+    letter-spacing: 0.1rem;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center; }
+  .sectionPublicacion .publicacion__paragraph {
+    padding: 1.5rem 0 1.5rem 0;
+    color: #9BA5B1;
+    font-size: 1.2rem;
+    line-height: 2rem; }
+  .sectionPublicacion .publicacion__videoContainer {
+    margin-bottom: 2.5rem; }
+  .sectionPublicacion .publicacion__video {
+    width: 100%;
+    height: 100%; }
 
 .section__contacto {
   margin-top: 5rem; }
 
 .label {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins";
   font-weight: 400;
   align-self: center; }
 
-.sectionPublicacion {
-  margin-top: 4rem; }
-
-.publicacion__titleH1 {
-  color: #010042;
-  letter-spacing: 0.1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  align-self: center; }
-
-.publicacion__paragraph {
-  padding: 1.5rem 0 1.5rem 0;
-  color: #9BA5B1;
-  font-size: 1.2rem;
-  line-height: 2rem; }
-
-.publicacion__videoContainer {
-  margin-bottom: 2.5rem; }
-
-.publicacion__video {
-  width: 100%;
-  height: 100%; }
-
-@media screen and (max-width: 992px) {
-  .header {
-    height: auto; }
-    .header .header__logo {
-      margin: 2rem 0; }
-    .header .header__list {
-      align-items: center;
-      margin-bottom: 2rem; } }
-
 @media screen and (max-width: 350px) {
-  .header__nav {
-    padding: 0; }
-    .header__nav .header__navComponent {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center; }
-      .header__nav .header__navComponent .header__menu {
-        margin-bottom: 2rem; } }
+  .iframeContacto {
+    width: 90%; } }
+
+.fuente, .publicacion__paragraph, .publicacion__expensas {
+  font-family: "Poppins";
+  font-weight: 400; }
+
+.busqueda__select {
+  cursor: pointer; }
+
+.busqueda__btn {
+  padding-right: 3rem;
+  padding-left: 3rem; }
+
+.publicacion {
+  margin-top: 2rem; }
+  .publicacion__card {
+    overflow: hidden; }
+  .publicacion__img {
+    object-fit: cover;
+    width: 30rem;
+    height: 25rem;
+    cursor: pointer; }
+  .publicacion__img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 1s; }
+  .publicacion__paragraph {
+    font-size: 1.2rem;
+    color: #869FB2;
+    line-height: 2rem; }
+  .publicacion__caracteristicas {
+    width: 100%;
+    color: #5C78B4; }
+  .publicacion__cantidad {
+    color: tomato;
+    font-size: 1rem; }
+  .publicacion__expensas {
+    font-size: 1.2rem;
+    color: #5C78B4;
+    line-height: 2rem;
+    align-self: center; }

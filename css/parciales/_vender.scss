@@ -1,0 +1,28 @@
+@import "../parciales/mapas";
+
+.sectionPublicacion{
+    margin-top: 4rem;
+    .publicacion{
+        &__titleH1{
+            color: #010042;
+            letter-spacing: 0.1rem;
+            font-family: map-get($fuentes, fuentePoppins);
+            font-weight: bold;
+            font-size: 2rem;
+            align-self: center;
+        }
+        &__paragraph{
+            padding: 1.5rem 0 1.5rem 0;
+            color: #9BA5B1;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+        &__videoContainer{
+            margin-bottom: 2.5rem;
+        }
+        &__video{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
