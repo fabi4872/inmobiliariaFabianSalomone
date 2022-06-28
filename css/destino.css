@@ -148,8 +148,15 @@
     width: 100%;
     height: 100%; }
 
-.section__contacto {
-  margin-top: 12rem; }
+.sectionContacto {
+  margin-top: 5rem; }
+  .sectionContacto__titleH1 {
+    color: #010042;
+    letter-spacing: 0.1rem;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center; }
 
 .label {
   font-family: "Poppins";
@@ -163,15 +170,6 @@
 .fuente, .publicacion__paragraph, .publicacion__expensas {
   font-family: "Poppins";
   font-weight: 400; }
-
-.main {
-  margin-top: 10rem; }
-  @media screen and (max-width: 992px) {
-    .main {
-      margin-top: 12rem; } }
-  @media screen and (max-width: 350px) {
-    .main {
-      margin-top: 15rem; } }
 
 .busqueda__titleH1 {
   color: #010042;

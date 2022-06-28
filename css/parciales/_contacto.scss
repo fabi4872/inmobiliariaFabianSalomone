@@ -1,8 +1,16 @@
 @import "../parciales/mapas";
 @import "../parciales/media";
 
-.section__contacto{
-    margin-top: 12rem;
+.sectionContacto{
+    margin-top: 5rem;
+    &__titleH1{
+        color: #010042;
+        letter-spacing: 0.1rem;
+        font-family: map-get($fuentes, fuentePoppins);
+        font-weight: bold;
+        font-size: 2rem;
+        align-self: center;
+    }
 }
 .label{
     font-family: map-get($fuentes, fuentePoppins);
