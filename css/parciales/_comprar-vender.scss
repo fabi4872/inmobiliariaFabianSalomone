@@ -1,10 +1,28 @@
 @import "../parciales/mapas";
+@import "../parciales/media";
 
 .fuente{
     font-family: map-get($fuentes, fuentePoppins);
     font-weight: map-get($fuentes, fw-400);
 }
+.main{
+    margin-top: 10rem;
+    @include tablet{
+        margin-top: 12rem;
+    }
+    @include movil{
+        margin-top: 15rem;
+    }
+}
 .busqueda{
+    &__titleH1{
+        color: #010042;
+        letter-spacing: 0.1rem;
+        font-family: map-get($fuentes, fuentePoppins);
+        font-weight: bold;
+        font-size: 2rem;
+        align-self: center;
+    }
     &__select{
         cursor: pointer;
     }
@@ -20,7 +38,7 @@
     }
     &__img{
         object-fit: cover;
-        width: 30rem;
+        width: 35rem;
         height: 25rem;
         cursor: pointer;
     }
@@ -29,10 +47,14 @@
         transition: ease-in-out 1s;
     }
     &__paragraph{
+        height: 5rem;
         @extend .fuente;
         font-size: 1.2rem;
         color: #869FB2;
         line-height: 2rem;
+        @include movil{
+            overflow: auto;
+        }
     }
     &__caracteristicas{
         width: 100%;

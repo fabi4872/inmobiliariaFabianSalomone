@@ -149,7 +149,7 @@
     height: 100%; }
 
 .section__contacto {
-  margin-top: 5rem; }
+  margin-top: 12rem; }
 
 .label {
   font-family: "Poppins";
@@ -164,6 +164,23 @@
   font-family: "Poppins";
   font-weight: 400; }
 
+.main {
+  margin-top: 10rem; }
+  @media screen and (max-width: 992px) {
+    .main {
+      margin-top: 12rem; } }
+  @media screen and (max-width: 350px) {
+    .main {
+      margin-top: 15rem; } }
+
+.busqueda__titleH1 {
+  color: #010042;
+  letter-spacing: 0.1rem;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 2rem;
+  align-self: center; }
+
 .busqueda__select {
   cursor: pointer; }
 
@@ -177,16 +194,20 @@
     overflow: hidden; }
   .publicacion__img {
     object-fit: cover;
-    width: 30rem;
+    width: 35rem;
     height: 25rem;
     cursor: pointer; }
   .publicacion__img:hover {
     transform: scale(1.05);
     transition: ease-in-out 1s; }
   .publicacion__paragraph {
+    height: 5rem;
     font-size: 1.2rem;
     color: #869FB2;
     line-height: 2rem; }
+    @media screen and (max-width: 350px) {
+      .publicacion__paragraph {
+        overflow: auto; } }
   .publicacion__caracteristicas {
     width: 100%;
     color: #5C78B4; }
