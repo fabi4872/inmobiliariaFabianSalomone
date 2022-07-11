@@ -42,6 +42,30 @@
         font-family: map-get($fuentes, fuentePoppins);
         font-weight: map-get($fuentes, fw-400);
     }
+    &__photoContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &__photo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: 0.5rem dashed #9BA5B1;
+        height: 15rem;
+        width: 15rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+    }
+    &__photoNumber{
+        color: #606264;
+        font-size: 1.2rem;
+    }
+    &__photo:hover{
+        border: 0.5rem dashed #606264;
+        background-color: #CCC;
+    }
     &__btn{
         width: 7rem;
     }

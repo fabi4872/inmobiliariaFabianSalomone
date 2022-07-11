@@ -161,6 +161,26 @@
   .formularioPublicacion__label {
     font-family: "Poppins";
     font-weight: 400; }
+  .formularioPublicacion__photoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .formularioPublicacion__photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.5rem dashed #9BA5B1;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    text-decoration: none; }
+  .formularioPublicacion__photoNumber {
+    color: #606264;
+    font-size: 1.2rem; }
+  .formularioPublicacion__photo:hover {
+    border: 0.5rem dashed #606264;
+    background-color: #CCC; }
   .formularioPublicacion__btn {
     width: 7rem; }
 
