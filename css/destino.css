@@ -129,7 +129,7 @@
     height: 5rem; }
 
 .sectionPublicacion {
-  margin-top: 4rem; }
+  margin-top: 1rem; }
   .sectionPublicacion .publicacion__titleH1 {
     color: #010042;
     letter-spacing: 0.1rem;
@@ -141,15 +141,31 @@
     padding: 1.5rem 0 1.5rem 0;
     color: #9BA5B1;
     font-size: 1.2rem;
-    line-height: 2rem; }
+    line-height: 2rem;
+    height: auto; }
   .sectionPublicacion .publicacion__videoContainer {
     margin-bottom: 2.5rem; }
   .sectionPublicacion .publicacion__video {
     width: 100%;
     height: 100%; }
 
+.formularioPublicacion {
+  margin-top: 3rem; }
+  .formularioPublicacion__title {
+    color: #010042;
+    letter-spacing: 0.1rem;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 2rem;
+    align-self: center; }
+  .formularioPublicacion__label {
+    font-family: "Poppins";
+    font-weight: 400; }
+  .formularioPublicacion__btn {
+    width: 7rem; }
+
 .sectionContacto {
-  margin-top: 5rem; }
+  margin-top: 3rem; }
   .sectionContacto__titleH1 {
     color: #010042;
     letter-spacing: 0.1rem;

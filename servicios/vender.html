@@ -50,16 +50,96 @@
         <section class="sectionPublicacion row">
             <article class="publicacion col-12 d-flex flex-column align-items-center">
                 <h1 class="publicacion__titleH1">Publique su propiedad</h1>
-                <p class="publicacion__paragraph">Un aspecto importante del marketing inmobiliario es la publicación de tu inmueble. Gracias a ella, 
-                    puedes alcanzar miles de potenciales interesados por un costo bajo (entre 1 y 2 USD por usuario si la haces correctamente).
+                <p class="publicacion__paragraph">Un aspecto importante del marketing inmobiliario es la publicación de tu inmueble. 
+                    Puedes alcanzar miles de potenciales interesados por un costo bajo.
                     Confía en nuestro equipo de expertos, y venderás tu propiedad sin pérdidas monetarias.
                 </p>
                 <div class="publicacion__videoContainer">
                     <video class="publicacion__video" src="../assets/vender.mp4" controls></video>
                 </div>
-                <a type="button" class="btn btn-primary" href="">Publique aquí</a>
             </article>
         </section>
+
+        <form class="formularioPublicacion row d-flex justify-content-center" action="#" method="get">
+            <h1 class="formularioPublicacion__title text-center">Formulario de publicación</h1>
+   
+            <div class="form-group col-12 col-md-6 mt-3">
+                <label class="label formularioPublicacion__label" for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="juan@gmail.com" required>
+            </div>
+                
+            <div class="form-group col-12 col-md-6 mt-3">
+                <label class="label formularioPublicacion__label" for="nombresApe">Nombres y apellidos</label>
+                <input type="text" class="form-control" id="nombresApe" placeholder="Juan Gómez" required>
+            </div>
+                
+            <div class="form-group col-12 col-md-6 mt-3">
+                <label class="label formularioPublicacion__label" for="ciudad">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" placeholder="La Plata" required>
+            </div>
+
+            <div class="form-group col-12 col-md-6 mt-3">
+                <label class="label formularioPublicacion__label" for="propiedad">Propiedad</label>
+                <select class="form-select form-control busqueda__select" aria-label="Default select example" id="propiedad" required>
+                    <option selected>Tipo de propiedad</option>
+                    <option value="1">Casa</option>
+                    <option value="2">Departamento</option>
+                    <option value="3">Dúplex</option>
+                    <option value="4">Terreno</option>
+                    <option value="5">Local</option>
+                    <option value="6">Cochera</option>
+                </select>
+            </div>
+
+            <div class="form-group col-12 col-md-4 mt-3">
+                <label class="label formularioPublicacion__label" for="moneda">Tipo de moneda</label>
+                <select class="form-select form-control busqueda__select" id="moneda" required>
+                    <option>USD</option>
+                    <option>ARS</option>
+                </select>
+            </div>
+
+            <div class="form-group col-12 col-md-4 mt-3">
+                <label class="label formularioPublicacion__label" for="precio">Precio</label>
+                <input type="text" class="form-control" id="precio" placeholder="50.000" required>
+            </div>
+
+            <div class="form-group col-12 col-md-4 mt-3">
+                <label class="label formularioPublicacion__label" for="aptoBanco">Apto banco</label>
+                <select class="form-select form-control busqueda__select" aria-label="Default select example" id="aptoBanco" required>
+                    <option selected>Seleccione</option>
+                    <option value="1">Sí</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+
+            <div class="form-group col-12 col-md-5 mt-3">
+                <label class="label formularioPublicacion__label" for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="44 y 20" required>
+            </div>
+                
+            <div class="form-group col-12 col-md-3 mt-3">
+                <label class="label formularioPublicacion__label" for="altura">Altura</label>
+                <input type="text" class="form-control" id="altura" placeholder="123" required>
+            </div>
+
+            <div class="form-group col-12 col-md-2 mt-3">
+                <label class="label formularioPublicacion__label" for="piso">Piso</label>
+                <input type="text" class="form-control" id="piso" placeholder="">
+            </div>
+
+            <div class="form-group col-12 col-md-2 mt-3">
+                <label class="label formularioPublicacion__label" for="depto">Depto</label>
+                <input type="text" class="form-control" id="depto" placeholder="">
+            </div>
+
+            <div class="form-group col-12 mt-3">
+                <label class="label formularioPublicacion__label" for="descripcion">Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="3" placeholder="Ingrese la descripción" required></textarea>
+            </div>
+           
+            <button type="submit" class="btn btn-primary formularioPublicacion__btn mt-3">Publicar</button>
+        </form>
     </main>
 
     <footer class="footer">

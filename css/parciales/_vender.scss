@@ -1,7 +1,7 @@
 @import "../parciales/mapas";
 
 .sectionPublicacion{
-    margin-top: 4rem;
+    margin-top: 1rem;
     .publicacion{
         &__titleH1{
             color: #010042;
@@ -16,6 +16,7 @@
             color: #9BA5B1;
             font-size: 1.2rem;
             line-height: 2rem;
+            height: auto;
         }
         &__videoContainer{
             margin-bottom: 2.5rem;
@@ -24,5 +25,24 @@
             width: 100%;
             height: 100%;
         }
+    }
+}
+
+.formularioPublicacion{
+    margin-top: 3rem;
+    &__title{
+        color: #010042;
+        letter-spacing: 0.1rem;
+        font-family: map-get($fuentes, fuentePoppins);
+        font-weight: bold;
+        font-size: 2rem;
+        align-self: center;
+    }
+    &__label{
+        font-family: map-get($fuentes, fuentePoppins);
+        font-weight: map-get($fuentes, fw-400);
+    }
+    &__btn{
+        width: 7rem;
     }
 }
